@@ -6,11 +6,16 @@
 - Added cache clear/warmup task for symfony4 recipe [#1575]
 - Added ability to use config params in host variables [#1508]
 - Make used shell configurable via `shellCommand` [#1536]
+- Added `cleanup_tty` option for `deploy:cleanup`
+- Added Prestashop 1.6 recipe
 
 ### Fixed
 - Fixed that long http user name is not detected correctly [#1580]
 - Fixed missing `var/sessions` in Symfony 4 shared_dirs
 - Fixed warning with host without configuration [#1583]
+- Removed the `magento:enable` task from the Magento 2 recipe since the module states are defined in `app/etc/config.php` and this task overwrote that.
+- Allow to set template file path in Drupal 7 recipe [#1603]
+- Fixed once() tasks that where being run multiple times with ParallelExecutor
 
 ## v6.1.0
 [v6.0.5...v6.1.0](https://github.com/deployphp/deployer/compare/v6.0.5...v6.1.0)
@@ -368,8 +373,8 @@
 - Fixed typo3 recipe
 - Fixed remove of shared dir on first deploy
 
-
-[#1583]: https://github.com/deployphp/deployer/issues/1583]
+[#1603]: https://github.com/deployphp/deployer/issues/1603
+[#1583]: https://github.com/deployphp/deployer/issues/1583
 [#1580]: https://github.com/deployphp/deployer/pull/1580
 [#1575]: https://github.com/deployphp/deployer/pull/1575
 [#1559]: https://github.com/deployphp/deployer/pull/1559
@@ -390,6 +395,7 @@
 [#1452]: https://github.com/deployphp/deployer/pull/1452
 [#1437]: https://github.com/deployphp/deployer/issues/1437
 [#1426]: https://github.com/deployphp/deployer/pull/1426
+[#1419]: https://github.com/deployphp/deployer/issues/1419
 [#1413]: https://github.com/deployphp/deployer/pull/1413
 [#1403]: https://github.com/deployphp/deployer/pull/1403
 [#1390]: https://github.com/deployphp/deployer/pull/1390
